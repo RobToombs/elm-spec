@@ -258,8 +258,8 @@ text claim =
 
     Spec.Markup.observeElement
       |> Spec.Markup.query << by [ tag "div" ]
-      |> Spec.expect (
-        Spec.Markup.attribute "class" <|
+      |> Spec.expect ( Spec.Claim.isSomethingWhere <|
+          Spec.Markup.attribute "class" <|
           Spec.Claim.isSomethingWhere <|
           Spec.Claim.isStringContaining 1 "red"
       )
